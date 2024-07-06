@@ -1,13 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title>News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row class="match with-border">
+      <ion-card>
+        <ion-col class="img-news py-2" size="auto">
+          <img
+            src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
+            height="60"
+            class=""
+          />
+        </ion-col>
+        <ion-col class="judul p-2">
+          <h6>Premier League - <span id="date-time">July 6, 2024 14:00</span></h6>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p>
+        </ion-col>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
 </ion-content>
