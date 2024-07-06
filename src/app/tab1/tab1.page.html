@@ -1,17 +1,113 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="ion-text-center">
+      <div class="title-container">Home</div>
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card-title>Live</ion-card-title>
+  <ion-card>
+    <img
+      alt="Silhouette of mountains"
+      src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
+    />
+    <ion-card-header>
+      <ion-card-subtitle>Premier League</ion-card-subtitle>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card-content>
+      The Premier League, often referred to as the English Premier League or the
+      EPL, is the top level of the English football league system.
+    </ion-card-content>
+  </ion-card>
+  <ion-card-title>Tournament</ion-card-title>
+  <ion-grid>
+    <ion-row class="tournament">
+      <ion-col>
+        <img src="../assets/logoPL.png" alt="" />
+      </ion-col>
+      <ion-col>
+        <img src="../assets/laliga.png" alt="" />
+      </ion-col>
+      <ion-col>
+        <img src="../assets/bundesliga.png" alt="" />
+      </ion-col>
+      <ion-col>
+        <img src="../assets/logoPL.png" alt="" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card-title>Lates Result</ion-card-title>
+  <ion-grid>
+    <ion-row class="match with-border">
+      <ion-col class="club ion-text-center">
+        <img src="../assets/newcastle.png" height="60" />
+        <p>Newcastle</p>
+        <br />
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <p>Premier League</p>
+        <ion-label color="success">2</ion-label>
+        -
+        <ion-label color="danger">0</ion-label>
+        <p>Stamford Bridge</p>
+      </ion-col>
+      <ion-col class="club ion-text-center">
+        <img src="../assets/chelsea.png" height="60" />
+        <p>Chelsea</p>
+        <br />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card-title>Upcoming Match</ion-card-title>
+  <ion-grid>
+    <ion-row class="match with-border">
+      <ion-col class="club ion-text-center">
+        <img src="../assets/newcastle.png" height="60" />
+        <p>Newcastle</p>
+        <br />
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <p>Premier League</p>
+        <ion-label color="white">23</ion-label>
+        :
+        <ion-label color="white">00</ion-label>
+        <p>Stamford Bridge</p>
+      </ion-col>
+      <ion-col class="club ion-text-center">
+        <img src="../assets/chelsea.png" height="60" />
+        <p>Chelsea</p>
+        <br />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card-title>News</ion-card-title>
+  <ion-grid>
+    <ion-row class="match with-border">
+      <ion-col class="img-news" size="auto">
+        <img
+          src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
+          height="60"
+          class=""
+        />
+      </ion-col>
+      <ion-col class="p-2">
+        <h6>Premier League</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
