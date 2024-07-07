@@ -12,15 +12,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid class="mx-2 mt-1">
-    <ion-row class="d-flex justify-content-around m-0">
-      <ion-button class="custom-button">Today</ion-button>
-      <ion-button class="custom-button">Today</ion-button>
-      <ion-button class="custom-button">Tomorrow</ion-button>
-      <ion-button class="custom-button">Latest Result</ion-button>
+  <ion-grid class="menu mt-1 mb-0">
+    <ion-row class="d-flex justify-content-between">
+      <ion-col>
+        <a class="btn py-1 px-2 mx-0 my-0 text-white mx-0 rounded-3" href="#" role="button" style="background-color: #4D68DA; font-size: 12px;">Today</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Tomorrow</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Lates result</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Futures</a>
+      </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid class="m-0">
+  <ion-grid class="mt-0">
     <ion-card class="shadow-sm border-0">
       <ion-row class="match with-border align-items-center mb-1">
         <ion-col class="club ion-text-center mt-2">

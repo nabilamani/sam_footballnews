@@ -1,17 +1,279 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+  <ion-grid class="d-flex justify-content-between m-1">
+    <ion-col>
+      Back
+    </ion-col>
+    <ion-col class="text-center">
+      Tournament
+    </ion-col>
+    <ion-col class="text-end">
+      Search
+    </ion-col>
+  </ion-grid>
+  <ion-card style="background-color: #4D68DA;" class="d-flex justify-content-center py-4">
+    <img src="./assets/PL_horizontal.png" alt="" height="60px">
+  </ion-card>
+  <ion-grid class="menu">
+    <ion-row class="d-flex justify-content-between">
+      <ion-col>
+        <a class="btn py-1 px-2 mx-0 my-0 text-white mx-0 rounded-3" href="#" role="button" style="background-color: #4D68DA; font-size: 12px;">Standings</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Top Score</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Assist</a>
+      </ion-col>
+      <ion-col>
+        <a class="btn py-1 px-1 mx-0 my-0 text-white mx-0" href="#" role="button" style="background-color: none; font-size: 12px;">Clearance</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card style="background-color: #17314c;" class="px-1 py-2">
+    <table class="table text-white ">
+      <thead>
+        <tr>
+          <th scope="col">Pos</th>
+          <th scope="col">Team</th>
+          <th scope="col">G</th>
+          <th scope="col">W</th>
+          <th scope="col">D</th>
+          <th scope="col">L</th>
+          <th scope="col">GF</th>
+          <th scope="col">GA</th>
+          <th scope="col">PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Liverpool</td>
+          <td>18</td>
+          <td>12</td>
+          <td>4</td>
+          <td>2</td>
+          <td>30</td>
+          <td>12</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Mancity</td>
+          <td>18</td>
+          <td>10</td>
+          <td>5</td>
+          <td>3</td>
+          <td>25</td>
+          <td>15</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Arsenal</td>
+          <td>17</td>
+          <td>9</td>
+          <td>3</td>
+          <td>5</td>
+          <td>24</td>
+          <td>16</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Chelsea</td>
+          <td>18</td>
+          <td>9</td>
+          <td>6</td>
+          <td>3</td>
+          <td>23</td>
+          <td>14</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Man United</td>
+          <td>18</td>
+          <td>8</td>
+          <td>7</td>
+          <td>3</td>
+          <td>21</td>
+          <td>13</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Tottenham</td>
+          <td>17</td>
+          <td>8</td>
+          <td>4</td>
+          <td>5</td>
+          <td>20</td>
+          <td>15</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Leicester City</td>
+          <td>18</td>
+          <td>7</td>
+          <td>6</td>
+          <td>5</td>
+          <td>19</td>
+          <td>17</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>West Ham United</td>
+          <td>18</td>
+          <td>7</td>
+          <td>5</td>
+          <td>6</td>
+          <td>18</td>
+          <td>16</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Everton</td>
+          <td>17</td>
+          <td>6</td>
+          <td>6</td>
+          <td>5</td>
+          <td>18</td>
+          <td>17</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Wolverhampton Wanderers</td>
+          <td>18</td>
+          <td>6</td>
+          <td>5</td>
+          <td>7</td>
+          <td>17</td>
+          <td>18</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Brighton & Hove Albion</td>
+          <td>18</td>
+          <td>5</td>
+          <td>7</td>
+          <td>6</td>
+          <td>17</td>
+          <td>19</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Crystal Palace</td>
+          <td>17</td>
+          <td>5</td>
+          <td>6</td>
+          <td>6</td>
+          <td>16</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>Brentford</td>
+          <td>18</td>
+          <td>4</td>
+          <td>8</td>
+          <td>6</td>
+          <td>16</td>
+          <td>21</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>Newcastle United</td>
+          <td>18</td>
+          <td>4</td>
+          <td>7</td>
+          <td>7</td>
+          <td>15</td>
+          <td>22</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>Aston Villa</td>
+          <td>17</td>
+          <td>4</td>
+          <td>6</td>
+          <td>7</td>
+          <td>14</td>
+          <td>23</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>Southampton</td>
+          <td>18</td>
+          <td>3</td>
+          <td>8</td>
+          <td>7</td>
+          <td>14</td>
+          <td>24</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td>Watford</td>
+          <td>18</td>
+          <td>3</td>
+          <td>6</td>
+          <td>9</td>
+          <td>12</td>
+          <td>26</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td>Burnley</td>
+          <td>18</td>
+          <td>2</td>
+          <td>8</td>
+          <td>8</td>
+          <td>12</td>
+          <td>27</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td>Leeds United</td>
+          <td>18</td>
+          <td>3</td>
+          <td>4</td>
+          <td>11</td>
+          <td>13</td>
+          <td>28</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <th scope="row">20</th>
+          <td>Norwich City</td>
+          <td>17</td>
+          <td>2</td>
+          <td>6</td>
+          <td>9</td>
+          <td>12</td>
+          <td>29</td>
+          <td>12</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </ion-card>
 </ion-content>

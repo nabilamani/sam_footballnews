@@ -1,23 +1,57 @@
-<ion-header [translucent]="true">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>News</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
+  <ion-grid class="d-flex justify-content-between mx-1 mt-1">
+    <ion-col>
+      Back
+    </ion-col>
+    <ion-col class="text-center">
+      News
+    </ion-col>
+    <ion-col class="text-end">
+      Search
+    </ion-col>
+  </ion-grid>
   <ion-grid>
-    <ion-row class="match with-border">
-      <ion-card>
-        <ion-col class="img-news py-2" size="auto">
-          <img
-            src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
-            height="60"
-            class=""
-          />
+    <ion-row class="with-border">
+      <ion-col class="px-2">
+        <img
+          src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710" class="rounded-3"
+        />
+      </ion-col>
+      <ion-card class="mt-1 px-2 py-0">
+        <ion-col class="artikel">
+          <h5>Premier League - <span id="date-time">July 6, 2024 14:00</span></h5>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p><br>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis accusantium labore perferendis amet odio hic ab possimus accusamus eum officiis sit enim veritatis culpa, atque quisquam numquam magnam quia. Velit in, accusantium facere blanditiis voluptates commodi error aspernatur dolorum eius corrupti mollitia suscipit! Id vero ea labore deserunt molestiae.</p>
         </ion-col>
-        <ion-col class="judul p-2">
-          <h6>Premier League - <span id="date-time">July 6, 2024 14:00</span></h6>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <hr class="mx-3 my-1">
+  <ion-grid>
+    <ion-row class="with-border">
+      <ion-col class="px-2">
+        <img
+          src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710" class="rounded-3"
+        />
+      </ion-col>
+      <ion-card class="mt-1 px-2 py-0">
+        <ion-col class="artikel">
+          <h5>Premier League - <span id="date-time">July 6, 2024 14:00</span></h5>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p><br>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis accusantium labore perferendis amet odio hic ab possimus accusamus eum officiis sit enim veritatis culpa, atque quisquam numquam magnam quia. Velit in, accusantium facere blanditiis voluptates commodi error aspernatur dolorum eius corrupti mollitia suscipit! Id vero ea labore deserunt molestiae.</p>
         </ion-col>
       </ion-card>
     </ion-row>
