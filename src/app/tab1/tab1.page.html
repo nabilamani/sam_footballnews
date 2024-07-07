@@ -19,22 +19,53 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card-title>Live</ion-card-title>
+  <ion-card-title>Live Score</ion-card-title>
   <ion-card>
-    <img
-      alt="Silhouette of mountains"
-      src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
-    />
-    <ion-card-header>
-      <ion-card-subtitle>Premier League</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      The Premier League, often referred to as the English Premier League or the
-      EPL, is the top level of the English football league system.
-    </ion-card-content>
+    <div style="position: relative; display: inline-block; width: 100%;">
+      <img
+        alt=""
+        src="./assets/bg-livescore.png"
+        style="width: 100%; height: auto; filter: brightness(60%);"
+      />
+      <img
+        alt="Logo"
+        src="./assets/logoPL.png"
+        style="position: absolute; top: 10px; right: 10px; width: 50px; height: auto;"
+      />
+      <div class="text-white" style="position: absolute; bottom: 10px; left: 15px;">
+        <a
+          href=""
+          style="
+            color: white;
+            font-size: 10px;
+            background-color: #4D68DA;
+            padding: 2px 5px;
+            border-radius: 5px;
+            text-decoration: none;
+          "
+          >Live Score</a
+        >
+        <h6 class="p-0 m-0">Liverpool vs Arsenal</h6>
+        <h6>Premier League</h6>
+        <p>Anfield, Liverpool</p>
+      </div>
+      <div style="position: absolute; bottom: 10px;"></div>
+    </div>
   </ion-card>
-  <ion-card-title>Tournament</ion-card-title>
+  
+  <ion-grid class="my-0">
+    <ion-row class="align-items-center">
+      <ion-col>
+        <ion-card-title class="mx-1 my-0">Tournaments</ion-card-title>
+      </ion-col>
+      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+          See all
+          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-grid>
     <ion-row class="tournament">
       <ion-col>
@@ -47,11 +78,24 @@
         <img src="../assets/bundesliga.png" alt="" />
       </ion-col>
       <ion-col>
-        <img src="../assets/logoPL.png" alt="" />
+        <img src="../assets/seria.png" alt="" />
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-card-title>Lates Result</ion-card-title>
+  <ion-grid class="my-0">
+    <ion-row class="align-items-center">
+      <ion-col>
+        <ion-card-title class="mx-1 my-0">Latest Result</ion-card-title>
+      </ion-col>
+      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+          See all
+          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
   <ion-grid>
     <ion-row class="match with-border">
       <ion-col class="club ion-text-center">
@@ -73,8 +117,20 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <hr class="mx-2 my-0">
-  <ion-card-title>Upcoming Match</ion-card-title>
+  <hr class="mx-2 my-0" />
+  <ion-grid class="my-0">
+    <ion-row class="align-items-center">
+      <ion-col>
+        <ion-card-title class="mx-1 my-0">Upcoming match</ion-card-title>
+      </ion-col>
+      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+          See all
+          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-grid>
     <ion-row class="match with-border">
       <ion-col class="club ion-text-center">
@@ -96,25 +152,20 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <hr class="mx-2 my-0">
-  <ion-card-title>News</ion-card-title>
-  <ion-grid>
-    <ion-row class="match with-border">
-      <ion-col class="img-news py-2" size="auto">
-        <img
-          src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
-          height="70"
-          class=""
-        />
+  <hr class="mx-2 my-0" />
+  <ion-grid class="my-0">
+    <ion-row class="align-items-center">
+      <ion-col>
+        <ion-card-title class="mx-1 my-0">News</ion-card-title>
       </ion-col>
-      <ion-col class="judul p-2">
-        <h6>Premier League - <span id="date-time">July 6, 2024 14:00</span></h6>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p>
+      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+          See all
+          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+        </a>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <hr class="mx-2 my-0">
-  <ion-card-title>Vieos</ion-card-title>
   <ion-grid>
     <ion-row class="match with-border">
       <ion-col class="img-news py-2" size="auto">
@@ -126,10 +177,43 @@
       </ion-col>
       <ion-col class="judul p-2">
         <h6>Premier League - <span id="date-time">July 6, 2024 14:00</span></h6>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt unde delectus fugit eos dolor necessitatibus.</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+          unde delectus fugit eos dolor necessitatibus.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="mx-2 my-0" />
+  <ion-grid class="my-0">
+    <ion-row class="align-items-center">
+      <ion-col>
+        <ion-card-title class="mx-1 my-0">Videos</ion-card-title>
+      </ion-col>
+      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+          See all
+          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="match with-border">
+      <ion-col class="img-news py-2" size="auto">
+        <img
+          src="https://e0.365dm.com/19/10/2048x1152/skysports-premier-league-top-four_4793134.jpg?20191002140710"
+          height="70"
+          class=""
+        />
+      </ion-col>
+      <ion-col class="judul p-2">
+        <h6>Premier League - <span id="date-time">July 6, 2024 14:00</span></h6>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+          unde delectus fugit eos dolor necessitatibus.
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
-
-
