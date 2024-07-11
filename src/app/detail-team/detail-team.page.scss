@@ -1,0 +1,28 @@
+.custom-toolbar {
+    --background: #08233e;
+  }
+  ion-content {
+    --background: #08233e;
+  }
+  ion-card {
+    --background: #17314c;
+  }
+  .custom-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .custom-back-button {
+    margin-left: 10px;
+    position: absolute;
+    left: 0;
+  }
+  
+  .custom-title {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  

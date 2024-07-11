@@ -1,0 +1,68 @@
+.custom-toolbar {
+    --background: #08233e;
+  }
+  ion-content {
+    --background: #08233e;
+  }
+  ion-card {
+    --background: #17314c;
+  }
+
+  .custom-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .custom-back-button {
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+  }
+  
+  .custom-title {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  ion-card {
+    margin: 10px 0;
+  }
+  
+  ion-card-content {
+    padding: 10px;
+  }
+  
+  .match {
+    display: flex;
+    align-items: center;
+  }
+  
+  .club img {
+    margin-bottom: 5px;
+  }
+  
+  .team-name, .league, .venue, .date, .time {
+    font-size: 1.2rem; /* Adjust this size based on screen size */
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .team-name, .league, .venue, .date, .time {
+      font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .team-name, .league, .venue, .date, .time {
+      font-size: 1.1rem; /* Medium font size for medium screens */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .team-name, .league, .venue, .date, .time {
+      font-size: 1.2rem; /* Larger font size for larger screens */
+    }
+  }
+  

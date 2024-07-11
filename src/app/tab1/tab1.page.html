@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-row class="align-items-center">
+  <ion-row class="align-items-center mt-1">
     <ion-col>
       <ion-card-title class="mx-1 my-0">Teams</ion-card-title>
     </ion-col>
@@ -73,19 +73,20 @@
   </ion-grid>
   
   <ion-grid *ngIf="latestResult">
-    <ion-row class="match with-border">
+    <ion-row class="match with-border ion-align-items-center">
       <ion-col class="club ion-text-center">
         <img [src]="latestResult.strHomeTeamBadge" height="60" />
         <p>{{ latestResult.strHomeTeam }}</p>
         <br />
       </ion-col>
-      <ion-col class="club ion-text-center mt-4">
+      <ion-col class="club ion-text-center ion-justify-content-center">
         <p>{{ latestResult.strLeague }}</p>
         <ion-label color="success">{{ latestResult.intHomeScore }}</ion-label>
         -
         <ion-label color="success">{{ latestResult.intAwayScore }}</ion-label>
         <p>{{ latestResult.strVenue }}</p>
       </ion-col>
+      
       <ion-col class="club ion-text-center">
         <img [src]="latestResult.strAwayTeamBadge" height="60" />
         <p>{{ latestResult.strAwayTeam }}</p>
@@ -111,13 +112,13 @@
   </ion-grid>
 
   <ion-grid *ngIf="upcoming">
-    <ion-row class="match with-border">
+    <ion-row class="match with-border ion-align-items-center">
       <ion-col class="club ion-text-center">
         <img [src]="upcoming.strHomeTeamBadge" height="60" />
         <p>{{ upcoming.strHomeTeam }}</p>
         <br />
       </ion-col>
-      <ion-col class="club ion-text-center mt-4">
+      <ion-col class="club ion-text-center">
         <p>{{ upcoming.strLeague }}</p>
 
         <p>{{ upcoming.strVenue }}</p>

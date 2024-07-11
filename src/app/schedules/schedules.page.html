@@ -1,32 +1,48 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="custom-toolbar">
     <ion-buttons slot="start">
-      <a href="/tabs/tab1" class="text-white text-decoration-none d-flex align-items-center">
+      <a href="/tabs/tab1" class="text-white text-decoration-none d-flex align-items-center custom-back-button">
         <ion-icon name="arrow-back-outline" class="me-2" style="font-size: 1.5rem; color: white;"></ion-icon>
       </a>
     </ion-buttons>
-    <ion-title class="ion-text-center">Schedules</ion-title>
+    <ion-title class="ion-text-center custom-title">Schedules</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
   <ion-grid>
-    <ion-row *ngFor="let match of upcomingMatches" class="match with-border">
-      <ion-col class="club ion-text-center">
-        <img [src]="match.strHomeTeamBadge" height="60" />
-        <p>{{ match.strHomeTeam }}</p>
-        <br />
-      </ion-col>
-      <ion-col class="club ion-text-center mt-4">
-        <p>{{ match.strLeague }}</p>
-        <p>{{ match.strVenue }}</p>
-        <p>{{ match.dateEvent }}</p>
-        <p>{{ match.strTime }}</p>
-      </ion-col>
-      <ion-col class="club ion-text-center">
-        <img [src]="match.strAwayTeamBadge" height="60" />
-        <p>{{ match.strAwayTeam }}</p>
-        <br />
+    <ion-row *ngFor="let match of upcomingMatches">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row class="match with-border">
+                <ion-col class="club ion-text-center">
+                  <img [src]="match.strHomeTeamBadge" height="60" />
+                  <p class="team-name">{{ match.strHomeTeam }}</p>
+                </ion-col>
+                <ion-col class="club ion-text-center mt-4">
+                  <p class="league">{{ match.strLeague }}</p>
+                  <p class="venue">{{ match.strVenue }}</p>
+                  <p class="date">{{ match.dateEvent }}</p>
+                  <p class="time">{{ match.strTime }}</p>
+                </ion-col>
+                <ion-col class="club ion-text-center">
+                  <img [src]="match.strAwayTeamBadge" height="60" />
+                  <p class="team-name">{{ match.strAwayTeam }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>

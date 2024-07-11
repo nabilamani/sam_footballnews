@@ -1,0 +1,24 @@
+.custom-toolbar {
+  --background: #08233e;
+}
+.custom-content {
+    --background: #08233e;
+  }
+  .custom-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .custom-back-button {
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+  }
+  
+  .custom-title {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
