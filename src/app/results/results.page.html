@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <a href="/tabs/tab1" class="text-white text-decoration-none d-flex align-items-center">
+        <ion-icon name="arrow-back-outline" class="me-2" style="font-size: 1.5rem; color: white;"></ion-icon>
+      </a>
+    </ion-buttons>
+    <ion-title class="ion-text-center">All Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let match of allResults">
+      <ion-col class="club ion-text-center">
+        <img [src]="match.strHomeTeamBadge" height="60" />
+        <p>{{ match.strHomeTeam }}</p>
+        <br />
+      </ion-col>
+      <ion-col class="club ion-text-center mt-4">
+        <p>{{ match.strLeague }}</p>
+        <ion-label color="success">{{ match.intHomeScore }}</ion-label>
+        -
+        <ion-label color="success">{{ match.intAwayScore }}</ion-label>
+        <p>{{ match.strVenue }}</p>
+        <p>{{ match.dateEvent }}</p>
+        <p>{{ match.strTime }}</p>
+      </ion-col>
+      <ion-col class="club ion-text-center">
+        <img [src]="match.strAwayTeamBadge" height="60" />
+        <p>{{ match.strAwayTeam }}</p>
+        <br />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

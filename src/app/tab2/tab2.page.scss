@@ -27,3 +27,42 @@ ion-card{
     display: flex;
     justify-content: center;
   }
+
+  
+
+
+
+
+  .menu {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari, and Opera */
+    }
+  }
+
+  .scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  }
+
+  .tabs-container {
+    display: flex;
+  }
+
+  .btn {
+    background-color: none;
+    font-size: 12px;
+  }
+
+  .active {
+    background-color: #4D68DA;
+  }
+
+  .inactive {
+    background-color: none;
+  }

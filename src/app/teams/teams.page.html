@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <a href="/tabs/tab1" class="text-white text-decoration-none d-flex align-items-center">
+        <ion-icon name="arrow-back-outline" class="me-2" style="font-size: 1.5rem; color: white;"></ion-icon>
+      </a>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Teams</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let team of teams" [routerLink]="['/detail-team', team.strTeam]">
+      <ion-avatar slot="start">
+        <img [src]="team.strBadge" alt="{{ team.strTeam }} logo">
+      </ion-avatar>
+      <ion-label>{{ team.strTeam }} ({{ team.strTeamShort }})</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

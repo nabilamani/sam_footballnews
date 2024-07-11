@@ -8,18 +8,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="custom-toolbar">
     <ion-title class="ion-text-center">
-      <div class="title-container">Home</div>
+      <div class="title-container">English Premier League</div>
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card-title>Live Score</ion-card-title>
+  <ion-row class="align-items-center">
+    <ion-col>
+      <ion-card-title class="mx-1 my-0">Teams</ion-card-title>
+    </ion-col>
+    <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
+      <a href="/teams" class="text-white text-decoration-none d-flex align-items-center">
+        See all
+        <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
+      </a>
+    </ion-col>
+  </ion-row>
   <ion-card>
     <div style="position: relative; display: inline-block; width: 100%;">
       <img
@@ -52,43 +57,14 @@
       <div style="position: absolute; bottom: 10px;"></div>
     </div>
   </ion-card>
-  
-  <ion-grid class="my-0">
-    <ion-row class="align-items-center">
-      <ion-col>
-        <ion-card-title class="mx-1 my-0">Tournaments</ion-card-title>
-      </ion-col>
-      <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
-        <a href="" class="text-white text-decoration-none d-flex align-items-center">
-          See all
-          <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
-        </a>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row class="tournament">
-      <ion-col>
-        <img src="../assets/logoPL.png" alt="" />
-      </ion-col>
-      <ion-col>
-        <img src="../assets/laliga.png" alt="" />
-      </ion-col>
-      <ion-col>
-        <img src="../assets/bundesliga.png" alt="" />
-      </ion-col>
-      <ion-col>
-        <img src="../assets/seria.png" alt="" />
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
   <ion-grid class="my-0">
     <ion-row class="align-items-center">
       <ion-col>
         <ion-card-title class="mx-1 my-0">Latest Result</ion-card-title>
       </ion-col>
       <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
-        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+        <a href="/results" class="text-white text-decoration-none d-flex align-items-center">
           See all
           <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
         </a>
@@ -96,64 +72,69 @@
     </ion-row>
   </ion-grid>
   
-  <ion-grid>
+  <ion-grid *ngIf="latestResult">
     <ion-row class="match with-border">
       <ion-col class="club ion-text-center">
-        <img src="../assets/newcastle.png" height="60" />
-        <p>Newcastle</p>
+        <img [src]="latestResult.strHomeTeamBadge" height="60" />
+        <p>{{ latestResult.strHomeTeam }}</p>
         <br />
       </ion-col>
       <ion-col class="club ion-text-center mt-4">
-        <p>Premier League</p>
-        <ion-label color="success">2</ion-label>
+        <p>{{ latestResult.strLeague }}</p>
+        <ion-label color="success">{{ latestResult.intHomeScore }}</ion-label>
         -
-        <ion-label color="danger">0</ion-label>
-        <p>Stamford Bridge</p>
+        <ion-label color="success">{{ latestResult.intAwayScore }}</ion-label>
+        <p>{{ latestResult.strVenue }}</p>
       </ion-col>
       <ion-col class="club ion-text-center">
-        <img src="../assets/chelsea.png" height="60" />
-        <p>Chelsea</p>
+        <img [src]="latestResult.strAwayTeamBadge" height="60" />
+        <p>{{ latestResult.strAwayTeam }}</p>
         <br />
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <hr class="mx-2 my-0" />
+
   <ion-grid class="my-0">
     <ion-row class="align-items-center">
       <ion-col>
         <ion-card-title class="mx-1 my-0">Upcoming match</ion-card-title>
       </ion-col>
       <ion-col class="d-flex justify-content-end align-items-center mx-2 g-1">
-        <a href="" class="text-white text-decoration-none d-flex align-items-center">
+        <a href="/schedules" class="text-white text-decoration-none d-flex align-items-center">
           See all
           <ion-icon name="chevron-forward-outline" class="ms-1"></ion-icon>
         </a>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
+
+  <ion-grid *ngIf="upcoming">
     <ion-row class="match with-border">
       <ion-col class="club ion-text-center">
-        <img src="../assets/newcastle.png" height="60" />
-        <p>Newcastle</p>
+        <img [src]="upcoming.strHomeTeamBadge" height="60" />
+        <p>{{ upcoming.strHomeTeam }}</p>
         <br />
       </ion-col>
       <ion-col class="club ion-text-center mt-4">
-        <p>Premier League</p>
-        <ion-label color="white">23</ion-label>
-        :
-        <ion-label color="white">00</ion-label>
-        <p>Stamford Bridge</p>
+        <p>{{ upcoming.strLeague }}</p>
+
+        <p>{{ upcoming.strVenue }}</p>
+        <p>{{ upcoming.dateEvent }}</p>
+        <p>{{ upcoming.strTime }}</p>
       </ion-col>
       <ion-col class="club ion-text-center">
-        <img src="../assets/chelsea.png" height="60" />
-        <p>Chelsea</p>
+        <img [src]="upcoming.strAwayTeamBadge" height="60" />
+        <p>{{ upcoming.strAwayTeam }}</p>
         <br />
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <hr class="mx-2 my-0" />
-  <ion-grid class="my-0">
+
+  <!-- <ion-grid class="my-0">
     <ion-row class="align-items-center">
       <ion-col>
         <ion-card-title class="mx-1 my-0">News</ion-card-title>
@@ -215,5 +196,5 @@
         </p>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>
