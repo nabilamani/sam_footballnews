@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class DetailTeamPage implements OnInit {
   team: any;
   teamShort: string = '';
+  lastMatches: any[] = [];
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -19,10 +20,20 @@ export class DetailTeamPage implements OnInit {
   }
   
   getTeamDetails(teamShort: string) {
-    console.log(teamShort);
     const url = `https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${teamShort}`;
     this.http.get(url).subscribe((data: any) => {
-      this.team = data.teams[0]; // Asumsi API mengembalikan array dengan satu tim
+      this.team = data.teams[0];
+      if (this.team) {
+        this.getLastMatches(this.team.idTeam);
+      }
+    });
+  }
+
+  getLastMatches(teamId: string) {
+    console.log(this.teamShort);
+    const url = `https://www.thesportsdb.com/api/v1/json/3/eventslast.php?id=${teamId}`;
+    this.http.get(url).subscribe((data: any) => {
+      this.lastMatches = data.results;
     });
   }
 }
