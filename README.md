@@ -1,4 +1,4 @@
-﻿## sam_footballnews(English Premier League)
+﻿## Sam_footballnews(English Premier League)
 
 ## Deskripsi
 Aplikasi web yang menyediakan informasi bagi para penggemar olahraga sepak bola yang ingin mengikuti perkembangan terbaru dalam dunia sepak bola, khususnya Liga Inggris. Aplikasi ini dirancang menggunakan Ionic dengan framework Angular, aplikasi ini menyediakan berbagai fitur yang bermanfaat, termasuk :
