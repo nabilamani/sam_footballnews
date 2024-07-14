@@ -8,8 +8,7 @@ Aplikasi web yang menyediakan informasi bagi para penggemar olahraga sepak bola 
 - **Jadwal Pertandingan**: Memuat informasi tentang waktu, tanggal, tempat, dan peserta dari setiap pertandingan yang dijadwalkan untuk liga inggris.
 - **Daftar Team**: Menampilkan kumpulan informasi tentang semua tim yang berpartisipasi dalam Liga Inggris.
 - **Detail Team**: Menampilkan inforamsi rinci yang disediakan tentang sebuah tim sepak bola liga inggris. Informasi ini mencakup berbagai aspek penting tentang tim, termasuk identitas, lokasi dan sejarah, serta history 5 latest result pada team tsbt.
-- **Daftar Penyusutan**: Menampilkan hasil akhir dari pertandingan-pertandingan yang telah dimainkan. . 
-- **Hasil Pertandingan**: Menyediakan jadwal pemeliharaan untuk setiap aset.
+- **Hasil Pertandingan**: Menampilkan hasil akhir dari pertandingan-pertandingan yang telah dimainkan.
 - **Klasemen**: Menampilkan tabel peringkat yang menunjukkan posisi tim-tim dalam klasemen liga inggris. .
 
 ## End Point (API)
